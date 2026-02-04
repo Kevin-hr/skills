@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh pr view:*)",
+      "Bash(gh pr list:*)",
+      "Bash(git clone:*)",
+      "WebFetch(domain:skills.sh)",
+      "Bash(npx skills add:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.remotion.dev)"
+    ]
+  }
+}

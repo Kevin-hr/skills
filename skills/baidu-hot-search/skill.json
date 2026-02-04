@@ -1,0 +1,24 @@
+{
+  "name": "baidu-hot-search",
+  "version": "1.0.0",
+  "description": "获取百度热搜榜数据，支持网页解析和API双通道",
+  "author": "Claude Code",
+  "commands": [
+    {
+      "name": "get_hot_search",
+      "description": "获取百度热搜榜单，支持多榜单分类"
+    },
+    {
+      "name": "search_trends",
+      "description": "搜索特定关键词的热度趋势"
+    }
+  ],
+  "execution": {
+    "type": "script",
+    "script": "scripts/baidu_hot_search.py"
+  },
+  "requirements": {
+    "python": ">=3.8",
+    "packages": ["requests", "beautifulsoup4", "lxml"]
+  }
+}

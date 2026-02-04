@@ -1,0 +1,23 @@
+{
+  "name": "baidu-hot-search",
+  "version": "1.0.0",
+  "displayName": "百度热搜获取",
+  "description": "从百度热搜榜获取热点数据，支持民生、财经、体育、娱乐等多榜单",
+  "examples": [
+    "获取今天百度热搜前20",
+    "搜索科技类热点",
+    "获取财经榜TOP10"
+  ],
+  "categories": ["数据获取", "热点分析"],
+  "keywords": ["百度", "热搜", "热点", "趋势", "热点挖掘"],
+  "permissions": ["network"],
+  "author": {
+    "name": "Claude Code",
+    "url": "https://claude.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthropics/claude-code"
+  },
+  "license": "MIT"
+}
