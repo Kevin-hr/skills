@@ -1,0 +1,34 @@
+{
+  "model": "sonnet",
+  "systemPrompt": ".claude/prompts/system_prompt.md",
+  "allowedTools": [
+    "Bash",
+    "Read",
+    "Write",
+    "Edit",
+    "Glob",
+    "Grep",
+    "WebSearch",
+    "WebFetch",
+    "Task",
+    "TodoWrite"
+  ],
+  "agents": {
+    "data-shark": {
+      "description": "数据掠食者 - 小红书/闲鱼数据挖掘专家",
+      "systemPrompt": ".claude/skills/data-scanner/SKILL.md"
+    },
+    "demand-surgeon": {
+      "description": "需求主刀医生 - 痛点提取与情绪分析",
+      "systemPrompt": ".claude/skills/demand-surgeon/SKILL.md"
+    },
+    "valuation-god": {
+      "description": "估值之神 - 价格敏感度与ROI预测",
+      "systemPrompt": ".claude/skills/valuation-god/SKILL.md"
+    },
+    "verdict-judge": {
+      "description": "毒舌判官 - 最终决策与风险评估",
+      "systemPrompt": ".claude/skills/verdict-judge/SKILL.md"
+    }
+  }
+}
