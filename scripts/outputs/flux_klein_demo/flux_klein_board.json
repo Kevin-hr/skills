@@ -1,0 +1,113 @@
+{
+  "board_id": "flux_klein_1770446713",
+  "topic": "DeepSeek AI工具横评",
+  "visual_anchor": {
+    "name": "现代程序员",
+    "description": "",
+    "key_feature": "盯着屏幕的表情变化"
+  },
+  "tone_type": "悬疑/探索",
+  "shots": [
+    {
+      "shot_num": 1,
+      "stage": "Visual Anchor处于环境中",
+      "shot_type": "ELS",
+      "camera_move": "STATIC",
+      "duration": 8,
+      "format": "16:9",
+      "description": "DeepSeek AI工具横评场景，现代程序员处于广阔环境中，环境呈现脚步移动效果，画面建立整体氛围",
+      "prompt_en": "extreme long shot, static shot, 现代程序员, DeepSeek AI工具横评场景，现代程序员处于广阔环境中，环境呈现脚步移动效果，画面建立整体氛围, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+      "tone": "脚步移动"
+    },
+    {
+      "shot_num": 2,
+      "stage": "聚焦眼睛/手/配饰",
+      "shot_type": "MS",
+      "camera_move": "PUSH",
+      "duration": 6,
+      "format": "16:9",
+      "description": "镜头缓缓推进，聚焦现代程序员的盯着屏幕的表情变化细节，环境逐渐虚化，主体更加突出",
+      "prompt_en": "medium shot, camera pushing forward, 现代程序员, 镜头缓缓推进，聚焦现代程序员的盯着屏幕的表情变化细节，环境逐渐虚化，主体更加突出, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+      "tone": "脚步移动"
+    },
+    {
+      "shot_num": 3,
+      "stage": "引起Visual Anchor注意",
+      "shot_type": "CU",
+      "camera_move": "STATIC",
+      "duration": 6,
+      "format": "16:9",
+      "description": "环境发生脚步移动变化，手部触碰、手电筒光束、门的开合，引起现代程序员的注意",
+      "prompt_en": "close-up, static shot, 现代程序员, 环境发生脚步移动变化，手部触碰、手电筒光束、门的开合，引起现代程序员的注意, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+      "tone": "脚步移动"
+    },
+    {
+      "shot_num": 4,
+      "stage": "转头/伸手/起步/眼神流转",
+      "shot_type": "MS",
+      "camera_move": "PAN",
+      "duration": 8,
+      "format": "16:9",
+      "description": "现代程序员做出渐进、谨慎、试探反应，开始与场景互动",
+      "prompt_en": "medium shot, camera panning, 现代程序员, 现代程序员做出渐进、谨慎、试探反应，开始与场景互动, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+      "tone": "脚步移动"
+    },
+    {
+      "shot_num": 5,
+      "stage": "行走/奔跑/抚摸/哭泣",
+      "shot_type": "LS",
+      "camera_move": "ORBIT",
+      "duration": 10,
+      "format": "16:9",
+      "description": "现代程序员正在进行动作，镜头环绕旋转，展现动作的连贯性",
+      "prompt_en": "long shot, camera orbiting, 现代程序员, 现代程序员正在进行动作，镜头环绕旋转，展现动作的连贯性, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+      "tone": "脚步移动"
+    },
+    {
+      "shot_num": 6,
+      "stage": "手指触碰/泪水滴落/全力冲刺",
+      "shot_type": "ECU",
+      "camera_move": "PUSH",
+      "duration": 8,
+      "format": "16:9",
+      "description": "情绪达到高潮，聚焦现代程序员的盯着屏幕的表情变化瞬间，捕捉关键表情或动作",
+      "prompt_en": "extreme close-up, camera pushing forward, 现代程序员, 情绪达到高潮，聚焦现代程序员的盯着屏幕的表情变化瞬间，捕捉关键表情或动作, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+      "tone": "脚步移动"
+    },
+    {
+      "shot_num": 7,
+      "stage": "物体亮起/花瓣散开/门打开",
+      "shot_type": "CU",
+      "camera_move": "STATIC",
+      "duration": 6,
+      "format": "16:9",
+      "description": "由于动作，环境产生反馈，画面展示变化效果",
+      "prompt_en": "close-up, static shot, 现代程序员, 由于动作，环境产生反馈，画面展示变化效果, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+      "tone": "脚步移动"
+    },
+    {
+      "shot_num": 8,
+      "stage": "发光纹路/水渍/羽毛",
+      "shot_type": "ECU",
+      "camera_move": "PULL",
+      "duration": 6,
+      "format": "16:9",
+      "description": "镜头聚焦变化后的细节，捕捉微妙的光影效果",
+      "prompt_en": "extreme close-up, camera pulling back, 现代程序员, 镜头聚焦变化后的细节，捕捉微妙的光影效果, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+      "tone": "脚步移动"
+    },
+    {
+      "shot_num": 9,
+      "stage": "与环境融为一体或离开",
+      "shot_type": "ELS",
+      "camera_move": "PULL",
+      "duration": 8,
+      "format": "16:9",
+      "description": "镜头拉远，现代程序员与环境融为一体，画面逐渐拉远，形成完整叙事闭环",
+      "prompt_en": "extreme long shot, camera pulling back, 现代程序员, 镜头拉远，现代程序员与环境融为一体，画面逐渐拉远，形成完整叙事闭环, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+      "tone": "脚步移动"
+    }
+  ],
+  "format": "16:9",
+  "created_at": "2026-02-07T14:45:13.369556"
+}

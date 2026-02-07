@@ -1,0 +1,83 @@
+[
+  {
+    "shot_num": 1,
+    "prompt": "extreme long shot, static shot, 现代程序员, DeepSeek AI工具横评场景，现代程序员处于广阔环境中，环境呈现脚步移动效果，画面建立整体氛围, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+    "width": 1920,
+    "height": 1080,
+    "steps": 4,
+    "cfg": 1,
+    "seed": 1000000
+  },
+  {
+    "shot_num": 2,
+    "prompt": "medium shot, camera pushing forward, 现代程序员, 镜头缓缓推进，聚焦现代程序员的盯着屏幕的表情变化细节，环境逐渐虚化，主体更加突出, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+    "width": 1920,
+    "height": 1080,
+    "steps": 4,
+    "cfg": 1,
+    "seed": 2000000
+  },
+  {
+    "shot_num": 3,
+    "prompt": "close-up, static shot, 现代程序员, 环境发生脚步移动变化，手部触碰、手电筒光束、门的开合，引起现代程序员的注意, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+    "width": 1920,
+    "height": 1080,
+    "steps": 4,
+    "cfg": 1,
+    "seed": 3000000
+  },
+  {
+    "shot_num": 4,
+    "prompt": "medium shot, camera panning, 现代程序员, 现代程序员做出渐进、谨慎、试探反应，开始与场景互动, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+    "width": 1920,
+    "height": 1080,
+    "steps": 4,
+    "cfg": 1,
+    "seed": 4000000
+  },
+  {
+    "shot_num": 5,
+    "prompt": "long shot, camera orbiting, 现代程序员, 现代程序员正在进行动作，镜头环绕旋转，展现动作的连贯性, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+    "width": 1920,
+    "height": 1080,
+    "steps": 4,
+    "cfg": 1,
+    "seed": 5000000
+  },
+  {
+    "shot_num": 6,
+    "prompt": "extreme close-up, camera pushing forward, 现代程序员, 情绪达到高潮，聚焦现代程序员的盯着屏幕的表情变化瞬间，捕捉关键表情或动作, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+    "width": 1920,
+    "height": 1080,
+    "steps": 4,
+    "cfg": 1,
+    "seed": 6000000
+  },
+  {
+    "shot_num": 7,
+    "prompt": "close-up, static shot, 现代程序员, 由于动作，环境产生反馈，画面展示变化效果, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+    "width": 1920,
+    "height": 1080,
+    "steps": 4,
+    "cfg": 1,
+    "seed": 7000000
+  },
+  {
+    "shot_num": 8,
+    "prompt": "extreme close-up, camera pulling back, 现代程序员, 镜头聚焦变化后的细节，捕捉微妙的光影效果, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+    "width": 1920,
+    "height": 1080,
+    "steps": 4,
+    "cfg": 1,
+    "seed": 8000000
+  },
+  {
+    "shot_num": 9,
+    "prompt": "extreme long shot, camera pulling back, 现代程序员, 镜头拉远，现代程序员与环境融为一体，画面逐渐拉远，形成完整叙事闭环, cinematic lighting, high quality, 8k, aspect ratio 16:9",
+    "width": 1920,
+    "height": 1080,
+    "steps": 4,
+    "cfg": 1,
+    "seed": 9000000
+  }
+]
