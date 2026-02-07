@@ -1,0 +1,70 @@
+{
+  "video_id": "deepseek_review_1770438664",
+  "topic": "DeepSeek AI工具横评",
+  "total_scenes": 5,
+  "scenes": [
+    {
+      "scene_id": "01",
+      "duration": 3,
+      "prompt": [
+        "别再用传统方式了！",
+        "这个DeepSeek",
+        "免费还更强！"
+      ],
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\scene_01.png",
+      "visual_style": "冲击标题"
+    },
+    {
+      "scene_id": "02",
+      "duration": 12,
+      "prompt": [
+        "还在用传统方式？",
+        "效率低",
+        "还费钱"
+      ],
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\scene_02.png",
+      "visual_style": "情景再现"
+    },
+    {
+      "scene_id": "03",
+      "duration": 45,
+      "prompt": [
+        "DeepSeek",
+        "AI工具演示",
+        "三步搞定"
+      ],
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\scene_03.png",
+      "visual_style": "屏幕录制"
+    },
+    {
+      "scene_id": "04",
+      "duration": 30,
+      "prompt": [
+        "效果对比",
+        "左边 → 右边",
+        "差距明显"
+      ],
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\scene_04.png",
+      "visual_style": "分屏对比"
+    },
+    {
+      "scene_id": "05",
+      "duration": 10,
+      "prompt": [
+        "推荐 DeepSeek",
+        "评论区扣1",
+        "关注领资料"
+      ],
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\scene_05.png",
+      "visual_style": "产品展示"
+    }
+  ],
+  "global_style": {
+    "keywords": [
+      "科技感",
+      "AI",
+      "赛博朋克"
+    ],
+    "resolution": "1080x1920"
+  }
+}
