@@ -1,6 +1,6 @@
 ---
-name: hot-video-script-generator
-description: 热点视频脚本生成器 - 基于5大核心原则自动生成爆款脚本
+name: hot-video-script-generator [DEPRECATED]
+description: ⚠️ [已废弃] 请使用 viral-creative-agent 或 hot-video-factory V2.2+
 type: Script Generation Engine
 category: Content Creation
 model: sonnet
@@ -9,6 +9,9 @@ author: Claude Code
 created: 2026-02-06
 tags: [script, video, hot-topic, viral, content]
 requires: [account-niche-filter]
+deprecated: true
+replacement: viral-creative-agent
+warning: 此技能已废弃，hot-video-factory V2.2 已集成 viral-creative-agent 作为脚本生成模块。
 ---
 
 # Hot Video Script Generator

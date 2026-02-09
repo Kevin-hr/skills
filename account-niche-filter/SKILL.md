@@ -1,194 +1,122 @@
 ---
 name: account-niche-filter
-description: 账号定位过滤器 - 根据账号画像过滤热点话题，匹配度高的才通过
-type: Content Filter & Matcher
+description: 选题决策系统 - 热点聚合+账号匹配+爆款预测，输出TOP3推荐选题。触发词：账号定位、赛道选择、人设匹配。
+type: Decision Engine
 category: Account Intelligence
-model: haiku
-version: 1.0.0
+version: 2.0.0
 author: Claude Code
-created: 2026-02-06
-tags: [filter, matching, account, niche]
+updated: 2026-02-09
+tags: [filter, matching, account, niche, decision, hot-topic]
 ---
 
-# Account Niche Filter
+# 选题决策系统 - Account Niche Filter v2.0
 
-## Skill Metadata
+整合热点聚合、账号匹配、爆款预测，输出TOP3推荐选题。
 
-| Field | Value |
-|-------|-------|
-| **Name** | account-niche-filter |
-| **Type** | Content Filter & Matcher |
-| **Category** | Account Intelligence |
-| **Version** | 1.0.0 |
-| **Model** | haiku |
-| **Author** | Claude Code |
+## 四大内容支柱
 
-## Description
+| 支柱 | 占比 | 定位 | 目标人群 |
+|------|------|------|---------|
+| 跨境电商组织实战 | 60% | 真实案例讲如何搭建高效电商团队 | 老板、创业者 |
+| 跨境支付与商业闭环 | 20% | 12年组织+3年支付经验，顶层视角 | 老板、CFO |
+| AI 商业效能 | 15% | 操盘手视角看AI，落地实操，降本增效 | 电商人、转型人群 |
+| 系统构建者人设 | 5% | 飞轮效应、系统思维、老板思维 | 创业者、搞钱人群 |
 
-账号定位过滤器，根据账号画像对热点话题进行匹配度评分，过滤不符合定位的热点，推荐最佳脚本类型。确保只有高匹配度的内容才会通过流水线。
+## 快速开始
 
-## When to Use This Skill
+| 场景 | 命令 |
+|------|------|
+| 筛选赛道 | `account-niche-filter --niche "AI工具"` |
+| 人设匹配 | `account-niche-filter --persona "技术型创业者"` |
+| 矩阵规划 | `account-niche-filter --matrix --count 5` |
 
-使用此技能 PROACTIVELY 当需要：
-- 过滤热点话题与账号定位的匹配度
-- 评估内容与账号风格的契合程度
-- 推荐最佳的内容类型和风格
-- 确保内容产出符合账号调性
+## 匹配维度
 
-## Core Capabilities
-
-### Matching Dimensions
-
-| Dimension | Weight | Description |
-|-----------|--------|-------------|
+| 维度 | 权重 | 说明 |
+|------|------|------|
 | 话题匹配度 | 30% | 话题与账号领域相关程度 |
 | 风格匹配度 | 25% | 内容风格与账号调性契合 |
 | 受众匹配度 | 20% | 目标受众重合度 |
 | 趋势匹配度 | 15% | 与热点趋势的契合度 |
 | 转化匹配度 | 10% | 商业转化潜力 |
 
-### Matching Scores
+## 评分等级
 
-| Score Range | Grade | Action |
-|-------------|-------|--------|
-| 90-100 | A+ | Highly recommended |
-| 80-89 | A | Recommended |
-| 70-79 | B | Acceptable |
-| 60-69 | C | Marginal |
-| <60 | F | Filter out |
+| 分数 | 等级 | 操作 |
+|------|------|------|
+| 90-100 | A+ | 强烈推荐 |
+| 80-89 | A | 推荐 |
+| 70-79 | B | 可用 |
+| 60-69 | C | 考虑 |
+| <60 | F | 过滤 |
 
-## Input/Output Schema
+## 输出格式
 
-### Input Format
-
+```json
 {
-  "account_profile": {
-    "name": "王总的AI工具库",
-    "description": "分享AI工具实测和使用技巧",
-    "tags": ["AI工具", "效率", "ChatGPT", "实测"],
-    "style": "专业但亲切",
-    "target_audience": {
-      "age_range": "25-40",
-      "interests": ["AI", "编程", "效率工具"],
-      "pain_points": ["工具选择困难", "使用门槛高"]
-    },
-    "content_types": ["干货型", "对比型"],
-    "avoid_topics": ["政治", "敏感话题"]
+  "filter_id": "uuid",
+  "timestamp": "2026-02-08T10:30:00Z",
+  "platform_recommendations": {
+    "百家号": {
+      "passed_topics": [
+        {
+          "topic_id": "topic_001",
+          "keyword": "DeepSeek免费",
+          "match_score": 92,
+          "match_grade": "A+",
+          "viral_score": 85,
+          "match_reasons": ["高热度", "高相关", "高转化潜力"]
+        }
+      ]
+    }
   },
-  "topics": [
+  "overall_top3": [
     {
-      "id": "topic_001",
+      "rank": 1,
       "keyword": "DeepSeek免费",
-      "category": "科技",
-      "trending_score": 98,
-      "related_keywords": ["AI", "开源", "大模型"]
+      "combined_score": 88,
+      "platforms": ["百家号", "抖音", "小红书"],
+      "recommendation": "强烈建议首发"
     }
   ]
 }
+```
 
-### Output Format
+## 统一标签
 
-{
-  "filter_id": "uuid",
-  "timestamp": "2026-02-07T10:30:00Z",
-  "passed_topics": [
-    {
-      "topic_id": "topic_001",
-      "keyword": "DeepSeek免费",
-      "match_score": 92,
-      "match_grade": "A+",
-      "match_details": {
-        "topic_match": 95,
-        "style_match": 90,
-        "audience_match": 88,
-        "trend_match": 85,
-        "conversion_potential": 92
-      },
-      "recommended_script_type": "对比型",
-      "recommended_style": "专业实测",
-      "match_reasons": [
-        "高热度： trending_score = 98",
-        "高相关： tags匹配度 = 95%",
-        "高转化潜力：适合账号受众"
-      ]
-    }
-  ],
-  "filtered_topics": [
-    {
-      "topic_id": "topic_005",
-      "keyword": "某明星八卦",
-      "match_score": 35,
-      "match_grade": "F",
-      "filter_reason": "话题与账号定位无关"
-    }
-  ],
-  "statistics": {
-    "total_topics": 20,
-    "passed": 8,
-    "filtered": 12,
-    "pass_rate": "40%",
-    "avg_match_score": 75
-  }
-}
+| 标签类型 | 内容 |
+|---------|------|
+| 核心标签 | AI实战派, 落地, 不搞玄学, 实测有用, 跨境电商, 组织效能 |
+| 受众痛点 | 工具选择困难, 使用门槛高, 想用AI赚钱, 团队管理头疼 |
 
-## Quality Metrics
+## 热点响应规则
 
-| Metric | Target | Actual | Status |
-|--------|--------|--------|--------|
-| Pass Rate | 30-50% | - | ? |
-| Match Accuracy | >90% | - | ? |
-| False Positive Rate | <5% | - | ? |
-| Processing Time | <1s | - | ? |
+| 优先级 | 热点类型 | 响应策略 | 时效 |
+|--------|---------|---------|------|
+| 1 | AI相关热点 | 优先响应，24小时内产出 | 24h |
+| 2 | 电商相关热点 | 优先响应，结合AI视角 | 48h |
+| 3 | 平台流量扶持 | 仅当与支柱相关时参与 | 72h |
+| 4 | 泛热点 | 禁止蹭热度 | - |
 
-## Error Handling
+## 故障排除
 
-### Failure Modes
-
-| Error Type | Probability | Impact | Recovery Strategy |
-|------------|-------------|--------|-------------------|
-| Account Profile Missing | 2% | High | Use default profile |
-| Invalid Topic Format | 3% | Medium | Skip invalid topics |
-| Score Calculation Error | 1% | Medium | Use fallback score |
-
-## Integration Patterns
-
-### Pipeline Integration
-
-hot-topic-detector
-    |
-    +-- Output: raw topics
-    |
-    +-- account-niche-filter
-    |
-    +-- Output: filtered topics (match_score >= 70)
-    |
-    +-- hot-video-script-generator
-
-### Recommended Script Types
-
-| Match Score | Recommended Type |
-|-------------|------------------|
-| 90+ | 对比型（深度评测） |
-| 80-89 | 干货型（知识输出） |
-| 70-79 | 热点解读型 |
-| <70 | 过滤 |
-
-## Limitations & Disclaimers
-
-| Limitation | Impact | Mitigation |
-|------------|--------|------------|
-| Subjective matching | May misclassify | Review threshold |
-| New topics | Lower accuracy | Learning from feedback |
+| 问题 | 解决方案 |
+|------|----------|
+| 账号配置缺失 | 使用默认配置 |
+| 格式错误 | 跳过无效话题 |
+| 评分异常 | 使用备用评分 |
+| API失败 | 使用缓存数据 |
 
 ## Changelog
 
-### Version 1.0.0 (2026-02-06)
+### v2.0.0 (2026-02-08)
+- 新增多平台账号矩阵配置
+- 新增需求分析集成
+- 新增爆款预测集成
+- 新增TOP3选题输出
+- 优化评分体系
 
-- Initial release
-- 5-dimension matching system
-- Script type recommendation
-- Quality scoring
-
----
-
-Mission: Ensure only high-quality, well-matched content passes through the production pipeline.
+### v1.0.0 (2026-02-06)
+- 初始版本
+- 5维度匹配系统
+- 脚本类型推荐
