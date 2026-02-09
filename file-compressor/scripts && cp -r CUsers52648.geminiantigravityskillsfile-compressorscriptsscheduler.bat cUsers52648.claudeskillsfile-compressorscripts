@@ -1,0 +1,143 @@
+<#
+.SYNOPSIS
+    管理文件压缩定时任务
+
+.DESCRIPTION
+    添加、删除或列出文件压缩定时任务
+
+.PARAMETER Action
+    操作类型: add, remove, list
+
+.PARAMETER Target
+    目标目录路径
+
+.PARAMETER Times
+    时间点列表，逗号分隔 (例如: "09:00,12:00,18:00")
+
+.EXAMPLE
+    .\create_task.ps1 -Action add -Target "C:\Users\52648\Downloads"
+    添加默认时间点的定时任务
+
+.EXAMPLE
+    .\create_task.ps1 -Action add -Target "C:\Users\52648\Downloads" -Times "09:00,14:00,20:00"
+    添加自定义时间点的定时任务
+
+.EXAMPLE
+    .\create_task.ps1 -Action remove
+    删除定时任务
+
+.EXAMPLE
+    .\create_task.ps1 -Action list
+    列出定时任务
+#>
+
+param(
+    [Parameter(Mandatory=$false)]
+    [ValidateSet('add', 'remove', 'list')]
+    [string]$Action = 'list',
+
+    [Parameter(Mandatory=$false)]
+    [string]$Target = "C:\Users\52648\Downloads",
+
+    [Parameter(Mandatory=$false)]
+    [string]$Times = "09:00,12:00,18:00,22:00"
+)
+
+# 获取脚本所在目录
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$CompressScript = Join-Path $ScriptDir "compress.py"
+
+# 默认时间点
+$DefaultTimes = @("09:00", "12:00", "18:00", "22:00")
+
+function Write-Log {
+    param([string]$Message)
+    $Timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    Write-Host "[$Timestamp] $Message"
+}
+
+function Add-Task {
+    Write-Log "正在添加定时任务..."
+
+    # 验证目标目录
+    if (-not (Test-Path $Target)) {
+        Write-Log "ERROR: 目录不存在: $Target"
+        exit 1
+    }
+
+    # 解析时间点
+    $TimeList = if ($Times -eq $DefaultTimes -join ",") {
+        $DefaultTimes
+    } else {
+        $Times.Split(',') | ForEach-Object { $_.Trim() }
+    }
+
+    $TaskName = "FileCompressor"
+
+    # 先删除已存在的任务
+    schtasks /query /tn $TaskName 2>$null | Out-Null
+    if ($LASTEXITCODE -eq 0) {
+        Write-Log "删除已存在的任务..."
+        schtasks /delete /tn $TaskName /f | Out-Null
+    }
+
+    # 创建新任务
+    $triggerCount = 0
+    foreach ($time in $TimeList) {
+        Write-Log "创建任务触发器: 每天 $time"
+        if ($triggerCount -eq 0) {
+            schtasks /create /tn $TaskName /tr "python `"$CompressScript`" --target `"$Target`" --mode auto" /sc daily /st $time /f | Out-Null
+        } else {
+            schtasks /create /tn $TaskName /tr "python `"$CompressScript`" --target `"$Target`" --mode auto" /sc daily /st $time /f | Out-Null
+        }
+        if ($LASTEXITCODE -eq 0) {
+            Write-Log "  [OK] 时间点 $time 已添加"
+        } else {
+            Write-Log "  [FAIL] 时间点 $time 添加失败"
+        }
+        $triggerCount++
+    }
+
+    Write-Log "任务创建完成，共 $($TimeList.Count) 个触发器"
+}
+
+function Remove-Task {
+    Write-Log "正在删除定时任务..."
+    $TaskName = "FileCompressor"
+
+    schtasks /query /tn $TaskName 2>$null | Out-Null
+    if ($LASTEXITCODE -ne 0) {
+        Write-Log "任务不存在: $TaskName"
+        return
+    }
+
+    schtasks /delete /tn $TaskName /f
+    if ($LASTEXITCODE -eq 0) {
+        Write-Log "[OK] 任务已删除"
+    } else {
+        Write-Log "[FAIL] 任务删除失败"
+    }
+}
+
+function List-Tasks {
+    Write-Log "查询定时任务..."
+    $TaskName = "FileCompressor"
+
+    schtasks /query /tn $TaskName /v /fo list 2>$null
+    if ($LASTEXITCODE -ne 0) {
+        Write-Log "任务不存在或查询失败"
+    }
+}
+
+# 执行操作
+switch ($Action) {
+    'add' {
+        Add-Task
+    }
+    'remove' {
+        Remove-Task
+    }
+    'list' {
+        List-Tasks
+    }
+}
