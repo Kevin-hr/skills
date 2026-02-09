@@ -1,0 +1,90 @@
+{
+  "16x9": [
+    {
+      "scene_id": "01",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_16x9\\scene_01_16x9.png",
+      "duration": 3,
+      "hook": "别再用传统方式了！",
+      "visual_style": "电影质感"
+    },
+    {
+      "scene_id": "02",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_16x9\\scene_02_16x9.png",
+      "duration": 8,
+      "hook": "曾经的我们",
+      "visual_style": "真实写实"
+    },
+    {
+      "scene_id": "03",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_16x9\\scene_03_16x9.png",
+      "duration": 15,
+      "hook": "直到我遇见了它",
+      "visual_style": "赛博朋克"
+    },
+    {
+      "scene_id": "04",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_16x9\\scene_04_16x9.png",
+      "duration": 25,
+      "hook": "三步搞定",
+      "visual_style": "屏幕录制"
+    },
+    {
+      "scene_id": "05",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_16x9\\scene_05_16x9.png",
+      "duration": 15,
+      "hook": "差距，一目了然",
+      "visual_style": "分屏对比"
+    },
+    {
+      "scene_id": "06",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_16x9\\scene_06_16x9.png",
+      "duration": 7,
+      "hook": "未来已经来了",
+      "visual_style": "电影质感"
+    }
+  ],
+  "9x16": [
+    {
+      "scene_id": "01",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_9x16\\scene_01_9x16.png",
+      "duration": 3,
+      "hook": "别再用传统方式了！",
+      "visual_style": "电影质感"
+    },
+    {
+      "scene_id": "02",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_9x16\\scene_02_9x16.png",
+      "duration": 8,
+      "hook": "曾经的我们",
+      "visual_style": "真实写实"
+    },
+    {
+      "scene_id": "03",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_9x16\\scene_03_9x16.png",
+      "duration": 15,
+      "hook": "直到我遇见了它",
+      "visual_style": "赛博朋克"
+    },
+    {
+      "scene_id": "04",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_9x16\\scene_04_9x16.png",
+      "duration": 25,
+      "hook": "三步搞定",
+      "visual_style": "屏幕录制"
+    },
+    {
+      "scene_id": "05",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_9x16\\scene_05_9x16.png",
+      "duration": 15,
+      "hook": "差距，一目了然",
+      "visual_style": "分屏对比"
+    },
+    {
+      "scene_id": "06",
+      "output_path": "C:\\Users\\52648\\Documents\\GitHub\\ai_xly\\scripts\\outputs\\storyboards\\oscar_9x16\\scene_06_9x16.png",
+      "duration": 7,
+      "hook": "未来已经来了",
+      "visual_style": "电影质感"
+    }
+  ]
+}

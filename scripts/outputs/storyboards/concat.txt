@@ -1,0 +1,11 @@
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\scene_01.png'
+duration 3
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\scene_02.png'
+duration 3
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\scene_03.png'
+duration 3
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\scene_04.png'
+duration 3
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\scene_05.png'
+duration 3
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\scene_05.png'

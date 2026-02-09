@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.bing.com)",
+      "Bash(curl:*)",
+      "Bash(npx tsx -e:*)",
+      "Bash(npx tsx:*)"
+    ]
+  }
+}

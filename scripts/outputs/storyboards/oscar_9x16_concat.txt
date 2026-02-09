@@ -1,0 +1,13 @@
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\oscar_9x16\scene_01_9x16.png'
+duration 3
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\oscar_9x16\scene_02_9x16.png'
+duration 8
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\oscar_9x16\scene_03_9x16.png'
+duration 15
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\oscar_9x16\scene_04_9x16.png'
+duration 25
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\oscar_9x16\scene_05_9x16.png'
+duration 15
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\oscar_9x16\scene_06_9x16.png'
+duration 7
+file 'C:\Users\52648\Documents\GitHub\ai_xly\scripts\outputs\storyboards\oscar_9x16\scene_06_9x16.png'
